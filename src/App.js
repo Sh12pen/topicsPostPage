@@ -1,7 +1,5 @@
-import TaskList from "./components/TaskList";
-import Greeting from "./Greeting";
+
 import Opened_topic from "./TopicPage";
-//import TaskList2 from "./TaskList2";
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
