@@ -30,7 +30,7 @@ function App() {
     <hr/>
 
       <Opened_topic/>
-      <p>needs a sidebar + fix title line header + comments section</p>
+      <p>footer below...</p>
 
     </div>
   );
