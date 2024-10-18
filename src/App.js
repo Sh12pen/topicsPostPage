@@ -3,6 +3,7 @@
 import Opened_topic from "./TopicPage";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 //import TaskList2 from "./TaskList2";
 // Bootstrap CSS
@@ -20,18 +21,39 @@ function App() {
   return ( 
     
     <div className="App">
+      
       <link href="navbar.css" rel="stylesheet"></link>
+     
+
     <THeader/>
-    <TNav />
+   
     <hr/>
 
       <Opened_topic/>
       <p>needs a sidebar + fix title line header + comments section</p>
-<Ic/>
-<BarIcon/>
+
     </div>
   );
 }//f1
+
+/**
+ *  <div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span id="navbar-button-toggler" class="navbar-toggler-icon"   >
+
+    </span>
+
+      
+    </button>
+  </div></nav>
+ * / */
 const Ic=()=>{return( 
 /*<svg 
   viewBox='0 0 30 30' 
@@ -53,7 +75,7 @@ aria-hidden="true"
 viewBox='0 0 30 30' 
   xmlns='http://www.w3.org/2000/svg'>
   <path 
-  stroke="Pink"
+   stroke='rgba(255,255,255,0.6)' 
   strokeWidth="2"
   strokeLinecap='round' 
   strokeMiterlimit='10' 
@@ -80,21 +102,18 @@ const BarIcon = () => {
       </svg>
   )
 }
+const svgString = encodeURIComponent(renderToStaticMarkup(    "background-image: url(&quot;data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;);"
+));
+//const dataUri = `url("data:image/svg+xml,${svgString}")`;
 const TNav=()=>(
 //make sidebar
+//
 
 <>
-const svgString = encodeURIComponent(renderToStaticMarkup(<Ic />));
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
-<span class="navbar-toggler-icon" 
-//style={{ backgroundImage: `url(${mySvg})` }}
-//style="background-image: url(&quot;data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;);">
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">Menu
 
-style={{
-  backgroundImage:` url(${"data:image/svg+xml,<svgString/>"})`}}>
-  </span>
         </button>
-      <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+      <div class="offcanvas offcanvas-start"  tabIndex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -133,13 +152,25 @@ const Types=()=>([
 ])
 
 const THeader=()=>(
-  <header class="d-flex justify-content-left py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+  
+  <header class="d-flex justify-content-center py-3 px-3">
+ 
+      <ul class="nav nav-pills ">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"><TNav/></a></li>
         <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
-        <li class="nav-item"><TNav/></li>
+        
         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">insert post header name?</a></li>
+        <li class="nav-item">
+              <a href="c" class="nav-link ">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><symbol id="people-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" 
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </symbol>
+                <use xlinkHref="#people-circle"></use></svg>
+                Account
+              </a>
+            </li>
       </ul>
     </header>
 );

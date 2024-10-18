@@ -48,9 +48,6 @@ const Attpt=()=>(
 <>
  
   <body>
-   
-
-  
 
 <div class="container my-5">
   <nav aria-label="breadcrumb">
@@ -135,5 +132,12 @@ function Dividerforsection(){
     return(
         <div class="b-example-divider"></div>
     )
+}
+
+function comments(){
+  //add components to respective sections after
+  return(
+    Node
+  );
 }
 export default Opened_topic;
