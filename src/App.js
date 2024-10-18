@@ -27,26 +27,74 @@ function App() {
 
       <Opened_topic/>
       <p>needs a sidebar + fix title line header + comments section</p>
-
+<Ic/>
+<BarIcon/>
     </div>
   );
 }//f1
+const Ic=()=>{return( 
+/*<svg 
+  viewBox='0 0 30 30' 
+  xmlns='http://www.w3.org/2000/svg'>
+  <path 
+  stroke='rgba(255,255,255,0.6)' 
+  stroke-width='2' 
+  stroke-linecap='round' 
+  stroke-miterlimit='10' 
+  d='M4 7h22M4 15h22M4 23h22'
+  />
+</svg>*/
+<svg
 
+className="w-6 h-6 text-gray-800 dark:text-white"
+aria-hidden="true"
+          fill="none"
+
+viewBox='0 0 30 30' 
+  xmlns='http://www.w3.org/2000/svg'>
+  <path 
+  stroke="Pink"
+  strokeWidth="2"
+  strokeLinecap='round' 
+  strokeMiterlimit='10' 
+  d='M4 7h22M4 15h22M4 23h22'
+  />
+
+  </svg>
+
+)}
+const BarIcon = () => {
+  return (
+      <svg
+          className="w-6 h-6 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24">
+          <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="2"
+              d="M5 7h14M5 12h14M5 17h14"
+          />
+      </svg>
+  )
+}
 const TNav=()=>(
 //make sidebar
+
 <>
-
-
+const svgString = encodeURIComponent(renderToStaticMarkup(<Ic />));
 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
 <span class="navbar-toggler-icon" 
 //style={{ backgroundImage: `url(${mySvg})` }}
 //style="background-image: url(&quot;data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;);">
 
-style={{backgroundImage: ` url(&quot;data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;)`}}
->
-							</span>
+style={{
+  backgroundImage:` url(${"data:image/svg+xml,<svgString/>"})`}}>
+  </span>
         </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+      <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -25,7 +25,7 @@ const Opened_topic=() => (
 </nav>
 </div>
 <hr/>
-<dividerforsection/>
+<Dividerforsection/>
 
             </>
     );
