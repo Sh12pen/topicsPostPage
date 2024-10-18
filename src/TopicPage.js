@@ -11,7 +11,6 @@ import ThemeSwitcher from "./TS";
 const Opened_topic=() => (
         
         <>
-          
         <div class="container row-3 " id="postbox">
         <nav aria-label="breadcrumb" class="feature col" >
         <ol ><div id="postname" class="col-1 row-0"> <h1> Topic name</h1></div></ol>
@@ -159,7 +158,7 @@ function SComment1(){
   return(
     <>
    <div class="container px-4">
-  <div class="row gx-5">
+   <div class="row gx-5">
     <div class="row col-xl">
     <Comments/></div>
     <div class="spacepls row-2 col-sm-3">
@@ -204,41 +203,48 @@ function SComment2(){
 
     <>
    <div class="container px-4">
-  <div class="row gx-5">
-    <div class="row col-xl">
-    <SComment1/></div>
-    <div class="spacepls row-2 col-sm-3">
-          <svg class="svg-inline--fa fa-reply fs-10 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="reply" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-            <path fill="currentColor" d="M205 34.8c11.5 5.1 19 16.6 19 29.2v64H336c97.2 0 176 78.8 176 176c0 113.3-81.5 163.9-100.2 174.1c-2.5 1.4-5.3 1.9-8.1 1.9c-10.9 0-19.7-8.9-19.7-19.7c0-7.5 4.3-14.4 9.8-19.5c9.4-8.8 22.2-26.4 22.2-56.7c0-53-43-96-96-96H224v64c0 12.6-7.4 24.1-19 29.2s-25 3-34.4-5.4l-160-144C3.9 225.7 0 217.1 0 208s3.9-17.7 10.6-23.8l160-144c9.4-8.5 22.9-10.6 34.4-5.4z">
-            </path></svg>
-        </div>
-    <div class="reply row-2 col-sm-9 ">
-      
-                            
+
+
+     <div class="row gx-5">
+       <div class="row col-xl"> <SComment1/></div>
+       <div class="spacepls row-2 col-sm-3">
+</div>
+
+       <div class="spacepls row-2 col-sm-3">
+              <svg class="svg-inline--fa fa-reply fs-10 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="reply" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor" d="M205 34.8c11.5 5.1 19 16.6 19 29.2v64H336c97.2 0 176 78.8 176 176c0 113.3-81.5 163.9-100.2 174.1c-2.5 1.4-5.3 1.9-8.1 1.9c-10.9 0-19.7-8.9-19.7-19.7c0-7.5 4.3-14.4 9.8-19.5c9.4-8.8 22.2-26.4 22.2-56.7c0-53-43-96-96-96H224v64c0 12.6-7.4 24.1-19 29.2s-25 3-34.4-5.4l-160-144C3.9 225.7 0 217.1 0 208s3.9-17.7 10.6-23.8l160-144c9.4-8.5 22.9-10.6 34.4-5.4z">
+                </path></svg>
+       </div>
+      <div class="reply row-2 col-sm-6 ">             
           <div class="conversation-avatar"> b
                               <a href="#" class="user-avatar">
                                 <img src="" alt=""/></a>
-                            </div>
+          </div>
                             
                             
-                            <div class="conversation-message">
-                              <div class="conversation-meta d-flex w-100 justify-content-between">
-                                <a href="#"><strong>Username </strong></a> 
-                                 <small class="time ml-1">timestamp</small>
-                              </div>
-                              <div class="conversation-message-text"> 
-                                response 
-                                texto                
-                                </div>
-                              <div class="conversation-meta">
-                                <a href="#">Like</a> · <a href="#">Reply</a> · <a href="#">Report</a>
-                              </div>
-                            </div>      
+          <div class="conversation-message">
+              <div class="conversation-meta d-flex w-100 justify-content-between">
+                <a href="#"><strong>Username </strong></a> 
+                  <small class="time ml-1">timestamp</small>
+              </div>
+              <div class="conversation-message-text"> 
+                response 
+                texto                
+              </div>
+              <div class="conversation-meta">
+                <a href="#">Like</a> · <a href="#">Reply</a> · <a href="#">Report</a>
+              </div>
+         </div>      
   
 
-         </div>
+      </div>
+  
+  
   </div>
-</div>
+
+
+ 
+ </div>
 </>
   )
 }

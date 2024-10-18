@@ -20,19 +20,21 @@ function App() {
   let x="<div className='App2'> + <h1>To-Do App2</h1>  <TaskList/>  <Greeting /> </div>";
   return ( 
     
-    <div className="App">
+    <div className="App" class="container">
       
-      <link href="navbar.css" rel="stylesheet"></link>
-     
+      
+     <link href="navbar.css" rel="stylesheet"></link>
+      
 
-    <THeader/>
-   
-    <hr/>
+          <THeader/>
+        
+          <hr/>
 
-      <Opened_topic/>
-      <p>footer below...</p>
+            <Opened_topic/>
+            <p>footer below...</p>
 
-    </div>
+
+  </div>
   );
 }//f1
 
