@@ -22,22 +22,22 @@ function App() {
   let x="<div className='App2'> + <h1>To-Do App2</h1>  <TaskList/>  <Greeting /> </div>";
   return ( 
     
-    <div className="App" class="container">
+    <div className="App" class="">
       
       
      <link href="navbar.css" rel="stylesheet"></link>
-     <div className="container-fluid px-4 row">
-        <div class="home-container col">
+     <div className="home-container ">
+        <div class="home-container ">
 
           <Sidebar/>
         </div>
-            <div class="col main-content">
+            <div class=" main-content">
                 <THeader/>
               
                 <hr/>
 
                   <Opened_topic/>
-                  <p>footer below...</p>
+                  <p>footer below... <br/> need to fix sidebar heghjt</p>
 
             </div>
     </div>
