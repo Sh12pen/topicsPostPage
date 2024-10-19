@@ -2,8 +2,16 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "name": "Install Dependencies",
-      "command": "yarn install"
+      "command": "yarn add react-router-dom",
+      "name": "Install Dependencies"
+    },
+    {
+      "command": "yarn add react-icons",
+      "name": "yarn install react-router-dom"
+    },
+    {
+      "command": "npm install --save react-router-dom",
+      "name": "npm install --save react-router-dom"
     }
   ],
 

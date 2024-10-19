@@ -4,6 +4,7 @@ import Opened_topic from "./TopicPage";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //import TaskList2 from "./TaskList2";
 // Bootstrap CSS
@@ -12,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import ThemeSwitcher from "./TS";
+import Sidebar from "./Sidebar/Sidebar.jsx";
 
 //const [show, setShow] = useState(false);
 //<link href="navbar.css" rel="stylesheet">
@@ -24,16 +26,21 @@ function App() {
       
       
      <link href="navbar.css" rel="stylesheet"></link>
-      
+     <div className="container-fluid px-4 row">
+        <div class="home-container col">
 
-          <THeader/>
-        
-          <hr/>
+          <Sidebar/>
+        </div>
+            <div class="col main-content">
+                <THeader/>
+              
+                <hr/>
 
-            <Opened_topic/>
-            <p>footer below...</p>
+                  <Opened_topic/>
+                  <p>footer below...</p>
 
-
+            </div>
+    </div>
   </div>
   );
 }//f1
@@ -158,7 +165,7 @@ const THeader=()=>(
   <header class="d-flex justify-content-center py-3 px-3">
  
       <ul class="nav nav-pills ">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"><TNav/></a></li>
+        <li class="nav-item"><TNav/></li>
         <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
         
         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
@@ -166,7 +173,7 @@ const THeader=()=>(
               <a href="c" class="nav-link ">
               <svg class="bi d-block mx-auto mb-1" width="24" height="24"><symbol id="people-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                  <path fill-rule="evenodd" 
+                  <path fillRule="evenodd" 
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </symbol>
                 <use xlinkHref="#people-circle"></use></svg>
