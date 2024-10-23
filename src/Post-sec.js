@@ -6,10 +6,10 @@ import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
 
 const LisofPosts=()=>(
-    <>
+    /*<>
     <script src="sparefunctions.js"/>
     <script>
-        var xhttp = new XMLHttpRequest();
+   /*     var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
            // getcontent(this);
@@ -18,10 +18,10 @@ const LisofPosts=()=>(
         };
 
 
-</script>
-    </>
-)
+</script>*/
+   null
+ )
 
 
 
-export default LisofPosts;
+//export default LisofPosts;
