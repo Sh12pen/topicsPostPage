@@ -22,40 +22,46 @@ function App() {
   let x="<div className='App2'> + <h1>To-Do App2</h1>  <TaskList/>  <Greeting /> </div>";
   return ( 
     
-    <div className="App" class="">
+    <div className="App" >
       
       
      <link href="navbar.css" rel="stylesheet"></link>
      <div className="home-container ">
-        <div class="home-container ">
+        <div className="home-container ">
 
           <Sidebar/>
         </div>
-            <div class=" main-content">
+            <div className=" main-content">
                 <THeader/>
               
                 <hr/>
-
+                <script>
+  console.log("help");
+  getcontent();
+ loadDoc(); 
+ 
+</script>
                   <Opened_topic/>
                   <p>footer below... <br/> need to fix sidebar heghjt</p>
 
             </div>
     </div>
+    
   </div>
   );
 }//f1
 
 /**
- *  <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
+ *  <div className="collapse" id="navbarToggleExternalContent">
+  <div className="bg-dark p-4">
+    <h5 className="text-white h4">Collapsed content</h5>
+    <span className="text-muted">Toggleable via the navbar brand.</span>
   </div>
 </div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span id="navbar-button-toggler" class="navbar-toggler-icon"   >
+<nav className="navbar navbar-dark bg-dark">
+  <div className="container-fluid">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span id="navbar-button-toggler" className="navbar-toggler-icon"   >
 
     </span>
 
@@ -119,27 +125,27 @@ const TNav=()=>(
 //
 
 <>
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">Menu
+<button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">Menu
 
         </button>
-      <div class="offcanvas offcanvas-start"  tabIndex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div className="offcanvas offcanvas-start"  tabIndex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <div className="offcanvas-body">
+          <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
             
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
               </a>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 
-                  <hr class="dropdown-divider"/>
+                  <hr className="dropdown-divider"/>
                 
               </ul>
             </li>
@@ -162,16 +168,16 @@ const Types=()=>([
 
 const THeader=()=>(
   
-  <header class="d-flex justify-content-center py-3 px-3">
+  <header className="d-flex justify-content-center py-3 px-3">
  
-      <ul class="nav nav-pills ">
-        <li class="nav-item"><TNav/></li>
-        <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
+      <ul className="nav nav-pills ">
+        <li className="nav-item"><TNav/></li>
+        <li className="nav-item"><a href="#" className="nav-link">Dashboard</a></li>
         
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item">
-              <a href="c" class="nav-link ">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><symbol id="people-circle" viewBox="0 0 16 16">
+        <li className="nav-item"><a href="#" className="nav-link">FAQs</a></li>
+        <li className="nav-item">
+              <a href="c" className="nav-link ">
+              <svg className="bi d-block mx-auto mb-1" width="24" height="24"><symbol id="people-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                   <path fillRule="evenodd" 
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
