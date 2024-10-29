@@ -37,9 +37,8 @@ function App() {
                 <hr/>
                 <script>
   console.log("help");
-  getcontent();
- loadDoc(); 
  
+ s
 </script>
                   <Opened_topic/>
                   <p>footer below... <br/> need to fix sidebar heghjt</p>

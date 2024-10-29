@@ -47,3 +47,20 @@ function getxml(text) {
 console.log(text);
 document.getElementsByClassName("VV")[0].innerHTML = "A" + text; // Access the first element with class "VV"
 }
+
+//######
+function makejson(){
+  const fs = require('fs');
+  let OP = document.getElementsByClassName("feature");//nav element contains first post
+    let headerv = OP.getElementsByClassName("postname");
+  /**const myObj = JSON.parse(myJSON);
+x = myObj["name"];
+ */
+let textv=OP.getElementsByClassName("posttext");
+let tagv=OP.getElementsByClassName("firsttag");
+let myJson ={"header":headerv,"text":textv,"tag1":[tagv] };
+fs.writeFile('./postdata.txt', JSON.stringify(myJson), (err) => {
+  if (err) console.log('Error writing file:', err);
+})
+
+}

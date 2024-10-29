@@ -33,8 +33,7 @@ const Opened_topic=() => (
 <SComment2/>
 <script>
   console.log("help");
-  getcontent();
- loadDoc(); 
+  makejson(); 
  
 </script>
 <p className="VV">p</p>
